@@ -1,9 +1,7 @@
-# Very Good Workflows
+# Core Workflows
 
-[![Very Good Ventures][logo_white]][very_good_ventures_link_dark]
-[![Very Good Ventures][logo_black]][very_good_ventures_link_light]
 
-Developed with 💙 by [Very Good Ventures][very_good_ventures_link] 🦄
+Copied from [Very Good Ventures][very_good_ventures_link] to allow for self-hosted CI runners.
 
 [![ci][ci_badge]][ci_link]
 [![License: MIT][license_badge]][license_link]

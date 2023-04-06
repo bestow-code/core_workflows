@@ -6,7 +6,8 @@ on:
       analyze_directories:
         required: false
         type: string
-        default: "lib test"
+#        default: "lib test"
+        default: ""
       concurrency:
         required: false
         type: number
@@ -22,7 +23,7 @@ on:
       min_coverage:
         required: false
         type: number
-        default: 100
+        default: 0
       platform:
         required: false
         type: string
@@ -35,6 +36,11 @@ on:
         required: false
         type: string
         default: "ubuntu-latest"
+      run_on_self_hosted_macos:
+        required: false
+        type: string
+        default: "ubuntu-latest"
+
       setup:
         required: false
         type: string
@@ -50,7 +56,8 @@ jobs:
       run:
         working-directory: ${{inputs.working_directory}}
 
-    runs-on: ${{inputs.runs_on}}
+#    runs-on: ${{inputs.runs_on}}
+    runs-on: [macOS, self-hosted]
 
     steps:
       - name: 📚 Git Checkout
