@@ -1,9 +1,7 @@
-# Very Good Workflows
+# Core Workflows
 
-[![Very Good Ventures][logo_white]][very_good_ventures_link_dark]
-[![Very Good Ventures][logo_black]][very_good_ventures_link_light]
 
-Developed with 💙 by [Very Good Ventures][very_good_ventures_link] 🦄
+Copied from [Very Good Ventures][very_good_ventures_link] to allow for self-hosted CI runners.
 
 [![ci][ci_badge]][ci_link]
 [![License: MIT][license_badge]][license_link]
@@ -18,19 +16,19 @@ To get started add very good workflows to an existing GitHub workflow:
 
 ```yaml
 # A reusable workflow for Dart packages
-uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
+uses: bestow-code/core_workflows/.github/workflows/dart_package.yml@v1
 
 # A reusable workflow for Flutter packages
-uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
+uses: bestow-code/core_workflows/.github/workflows/flutter_package.yml@v1
 
 # A reusable workflow for ensuring commits are semantic
-uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
+uses: bestow-code/core_workflows/.github/workflows/semantic_pull_request.yml@v1
 
 # A reusable workflow for verifying package scores on pub.dev
-uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/pana.yml@v1
+uses: bestow-code/core_workflows/.github/workflows/pana.yml@v1
 
 # A reusable workflow for running a spell check
-uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/spell_check.yml@v1
+uses: bestow-code/core_workflows/.github/workflows/spell_check.yml@v1
 ```
 
 For a more detailed guide, including tips and tricks, check out [our blog][very_good_workflows_blog_link].
@@ -119,7 +117,7 @@ on: pull_request
 
 jobs:
   build:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
+    uses: bestow-code/core_workflows/.github/workflows/dart_package.yml@v1
     with:
       coverage_excludes: "*.g.dart"
       dart_sdk: "stable"
@@ -218,7 +216,7 @@ on: pull_request
 
 jobs:
   build:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
+    uses: bestow-code/core_workflows/.github/workflows/flutter_package.yml@v1
     with:
       coverage_excludes: "*.g.dart"
       flutter_channel: "stable"
@@ -256,7 +254,7 @@ on: pull_request
 
 jobs:
   build:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
+    uses: bestow-code/core_workflows/.github/workflows/semantic_pull_request.yml@v1
 ```
 
 ## Pana Workflow
@@ -301,7 +299,7 @@ on: pull_request
 
 jobs:
   build:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/pana.yml@v1
+    uses: bestow-code/core_workflows/.github/workflows/pana.yml@v1
     with:
       min_score: 95
       working_directory: "examples/my_flutter_package"
@@ -363,7 +361,7 @@ on: pull_request
 
 jobs:
   build:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/spell_check.yml@v1
+    uses: bestow-code/core_workflows/.github/workflows/spell_check.yml@v1
     with:
       includes: |
         **/*.{dart,md,yaml}
@@ -374,8 +372,8 @@ jobs:
       working_directory: examples/my_project
 ```
 
-[ci_badge]: https://github.com/VeryGoodOpenSource/very_good_workflows/actions/workflows/ci.yml/badge.svg
-[ci_link]: https://github.com/VeryGoodOpenSource/very_good_workflows/actions
+[ci_badge]: https://github.com/bestow-code/core_workflows/actions/workflows/ci.yml/badge.svg
+[ci_link]: https://github.com/bestow-code/core_workflows/actions
 [github_workflows_link]: https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_link]: https://opensource.org/licenses/MIT
